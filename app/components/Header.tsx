@@ -1,16 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Section } from "./Section";
+import { GithubIcon } from "../icons/GithubIcon";
+import { Link } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export const Header = () => {
 	return (
 		<header className="sticky top-0 py-4">
 			<Section className="flex items-baseline">
-				<h1 className="text-4xl font-bold text-primary-foreground">marinamassot.com</h1>
+				<h1 className="text-lg font-bold text-primary">marinamassot.com</h1>
 				<div className="flex-1" />
 				<ul>
-					<Button className="size-6" variant="outline">
-						<img src="my-portfolio/app/icons/github-icon.svg" alt="Github" className="w-4 h-4" />
-					</Button>
+					<a href="https://github.com/marinamassot" className={cn(buttonVariants({variant: "outline"}), "size-6 p-0")}>
+						<GithubIcon size={16} className="text-foreground"/>
+					</a>
 				</ul>
 			</Section>
 		</header>
