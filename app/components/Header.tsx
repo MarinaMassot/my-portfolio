@@ -4,6 +4,7 @@ import { GithubIcon } from "../icons/GithubIcon";
 import { Link } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { LinkedinIcon } from "../icons/LinkedinIcon";
 
 export const Header = () => {
 	return (
@@ -11,9 +12,12 @@ export const Header = () => {
 			<Section className="flex items-baseline">
 				<h1 className="text-lg font-bold text-primary">marinamassot.com</h1>
 				<div className="flex-1" />
-				<ul>
+				<ul className="flex items-center gap-2">
 					<a href="https://github.com/marinamassot" className={cn(buttonVariants({variant: "outline"}), "size-6 p-0")}>
 						<GithubIcon size={16} className="text-foreground"/>
+					</a>
+					<a href="https://linkedin.com/in/marinamassot" className={cn(buttonVariants({variant: "outline"}), "size-6 p-0")}>
+						<LinkedinIcon size={16} className="text-foreground"/>
 					</a>
 				</ul>
 			</Section>
