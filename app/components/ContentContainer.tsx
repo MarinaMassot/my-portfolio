@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
 import { Spacing } from "./Spacing";
 import { ProjectsContainer } from "./ProjectsContainer";
+import { AboutContainer } from "./AboutContainer";
 
 export const ContentContainer = () => {
 	return (
@@ -16,7 +17,7 @@ export const ContentContainer = () => {
 <Spacing size="md" />
 			<Section>
 				<div className="flex-[2] flex flex-col gap-4">
-					<Card className="p-4 flex-1">Formation</Card>
+					<Card className="p-4 flex-1">A propos de moi <AboutContainer className="w-full"/></Card>
 					<Card className="p-4 flex-1">Contacte-moi</Card>
 				</div>
 			</Section>
