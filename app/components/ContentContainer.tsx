@@ -3,6 +3,7 @@ import { Section } from "./Section";
 import { Spacing } from "./Spacing";
 import { ProjectsContainer } from "./ProjectsContainer";
 import { AboutContainer } from "./AboutContainer";
+import { ContactCard } from "./ContactCard";
 
 export const ContentContainer = () => {
 	return (
@@ -18,7 +19,8 @@ export const ContentContainer = () => {
 			<Section>
 				<div className="flex-[2] flex flex-col gap-4">
 					<Card className="p-4 flex-1">A propos de moi <AboutContainer className="w-full"/></Card>
-					<Card className="p-4 flex-1">Contacte-moi</Card>
+					<Spacing size="sm" />
+					<Card className="p-4 flex-1">Contacte-moi <ContactCard/></Card>
 				</div>
 			</Section>
 		</>
