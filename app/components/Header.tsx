@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Section } from "./Section";
-import { GithubIcon } from "../icons/GithubIcon";
-import { Link } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Link } from "lucide-react";
+import { GithubIcon } from "../icons/GithubIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
+import { Section } from "./Section";
 
 export const Header = () => {
 	return (
