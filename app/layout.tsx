@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import "./resetCss.css"
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "./components/ThemeProvider";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +39,7 @@ export default function RootLayout({
       <body
         className={cn(geistSans.variable, geistMono.variable, poppins.variable, "font-sans h-full bg-background text-foreground",)} 
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
         {children}
         </ThemeProvider>
       </body>

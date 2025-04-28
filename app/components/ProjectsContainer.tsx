@@ -57,7 +57,7 @@ export function ProjectsContainer({ className }: { className?: string }) {
 										{project.title}
 									</h3>
 									<p className="text-ml h-[33%]">{project.description}</p>
-									<p className="text-sm text-gray-500 mt-20">{project.stack}</p>
+									<p className="text-sm mt-20">{project.stack}</p>
 								</CardContent>
 							</Card>
 						</div>

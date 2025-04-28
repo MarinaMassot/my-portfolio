@@ -1,12 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
+import { Spacing } from "./Spacing";
 
 export const AboutContainer = ({ className }: { className?: string }) => {
 	return (
 		<div>
 			<Section className={`w-full ${className} flex gap-4`}>
 				<Card className="flex-1 flex gap-1 items-center"> 
-					<img className="w-10 h-10" src="/images/apprentissage-adaptatif.png" title="apprentissage-adaptatif-icône" alt="Apprentissage adaptatif icônes créées par Dewi Sari - Flaticon"/>
+					<img className="rounded-full w-10 h-10" src="/images/apprentissage-adaptatif.png" title="apprentissage-adaptatif-icône" alt="Apprentissage adaptatif icônes créées par Dewi Sari - Flaticon"/>
 					<p>Adaptable</p> </Card>
 					<Card className="flex-1 flex gap-1 items-center"> 
 					<img className="w-10 h-10" src="/images/la-vitesse.png" title="la-vitesse-icône" alt="La vitesse icônes crées par Smashicons - Flaticon"/>
@@ -14,10 +15,10 @@ export const AboutContainer = ({ className }: { className?: string }) => {
 					<img className="w-10 h-10" src="/images/apprentissage-autonome.png" title="apprentissage-autonome-icône" alt="Apprentissage adaptatif icônes créées par FreePik - Flaticon"/>
 					<p>Autonome</p> </Card>
 			</Section>
-
+			<Spacing size="sm" />
 			<Section>
-				<Card className="flex-1">
-					Mes expériences professionnelles significatives
+				<Card className="flex-1 p-10">
+					<h2 className="text-2xl font-bold"> Mes expériences professionnelles significatives</h2>					
 					<ul className="list-disc pl-4">
 						<li className="mt-4">
 							<strong>

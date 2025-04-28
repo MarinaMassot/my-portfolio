@@ -1,6 +1,10 @@
-import { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 import { Section } from "./Section";
 import { cn } from "@/lib/utils";
+import { GithubIcon } from "../icons/GithubIcon";
+import { LinkedinIcon } from "../icons/LinkedinIcon";
+import { Button } from "@/components/ui/button";
+
 
 const TextInBold = ({
 	className,
@@ -22,6 +26,14 @@ export const Hero = () => {
 		<Section className="flex max-md:flex-col items-start gap-4">
 			<div className="flex-[3] flex flex-col gap-2 width-full">
 				<h2 className="font-bold text-5xl text-primary">Marina Massot</h2>
+				<ul className="flex items-center gap-2">
+					<a href="https://github.com/marinamassot">
+						<GithubIcon size={60} className="text-foreground"/>
+					</a>
+					<a href="https://linkedin.com/in/marinamassot">
+						<LinkedinIcon size={60} className="text-foreground"/>
+					</a>
+				</ul>
 				<h3 className="font-bold text-3xl">Développeuse web fullstack</h3>
 				<p className="text-lg text-muted-foreground mt-4">
 					En pleine reconversion professionnelle vers le{" "}
@@ -37,6 +49,16 @@ export const Hero = () => {
 					d'apprentissage et témoigne de ma motivation à acquérir et à mettre en
 					œuvre mes compétences pour créer des solutions web complètes
 				</p>
+				<Button asChild className="text-2xl text-bold m-6 w-1/2">
+  <a
+    href="cv-marina-massot.pdf"
+    target="_blank"
+    rel="noreferrer"
+    download="cv-marina-massot.pdf"
+  >
+    Télécharge mon CV
+  </a>
+</Button>
 			</div>
 			<div className="flex-[2] max-md:m-auto ml-auto">
 				<img
