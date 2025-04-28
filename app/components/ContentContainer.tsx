@@ -10,8 +10,7 @@ export const ContentContainer = () => {
 		<>
 			<Section className="flex max-md:flex-col items-start gap-4">
 				<Card className="flex-[4] w-full p-4">
-					{" "}
-					Projets{" "}
+					Projets
 					<ProjectsContainer className="w-full"/>
 				</Card>
 			</Section>

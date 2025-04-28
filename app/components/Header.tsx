@@ -5,6 +5,7 @@ import { Link } from "lucide-react";
 import { GithubIcon } from "../icons/GithubIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
 import { Section } from "./Section";
+import { ThemeToogle } from "./ThemeToogle";
 
 export const Header = () => {
 	return (
@@ -19,6 +20,7 @@ export const Header = () => {
 					<a href="https://linkedin.com/in/marinamassot" className={cn(buttonVariants({variant: "outline"}), "size-6 p-0")}>
 						<LinkedinIcon size={16} className="text-foreground"/>
 					</a>
+					<ThemeToogle />
 				</ul>
 			</Section>
 		</header>

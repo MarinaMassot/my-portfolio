@@ -11,5 +11,10 @@ module.exports = {
 	theme: {
 	  extend: {},
 	},
+	fontFamily: {
+		sans: ["var(--font-geist-sans"],
+		caption: ["var(--font-caption"],
+	},
+
 	plugins: [require("tailwindcss-animate")],
   };
