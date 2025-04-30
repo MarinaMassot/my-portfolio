@@ -77,7 +77,7 @@ export function ProjectsContainer({ className }: { className?: string }) {
     }, [projectsData]);
 
     return (
-        <Carousel className={`w-full ${className}`}>
+        <Carousel className="w-full" >
             <CarouselContent className="-ml-1 h-full">
                 {projectsData.map((project, index) => (
                     <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
@@ -109,7 +109,7 @@ export function ProjectsContainer({ className }: { className?: string }) {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className="bg-primary accent-purple-700 border-b-blue-700" />
+            <CarouselPrevious />
             <CarouselNext />
         </Carousel>
     );
