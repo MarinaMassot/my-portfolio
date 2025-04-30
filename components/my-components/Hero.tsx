@@ -28,7 +28,6 @@ export const Hero = () => {
 		<Section className="flex max-md:flex-col items-start">
 			<div className="flex-[3] flex flex-col gap-2 width-full">
 				<h2 className="font-bold text-6xl text-primary font-mono">Marina Massot</h2>
-
 				<ul className="flex items-center gap-2">
 					<a href="https://github.com/marinamassot">
 						<GithubIcon size={60} className="text-foreground" />
@@ -37,6 +36,15 @@ export const Hero = () => {
 						<LinkedinIcon size={60} className="text-foreground" />
 					</a>
 				</ul>
+				<div className="flex-[2] max-md:m-auto ml-auto md:hidden">
+			<Image
+    width={500}
+    height={500}
+    src="/images/marina-pic.png"
+    alt="Marina-Massot"
+    className="w-full height-auto max-w-sm max-md:w-56 m-auto"
+/>
+			</div>
 				<Spacing size="sm" />
 				<h3 className="font-bold text-3xl font-mono">Développeuse web fullstack</h3>
 				<Spacing size="sm" />
@@ -53,7 +61,7 @@ export const Hero = () => {
 					œuvre mes compétences pour créer des solutions web complètes.
 					Actuellement je travaille sur <TextInBold> <a href="https://github.com/SolesApp">SoleApp</a></TextInBold>, Un site comparatif intuitif pour les passionnés de basketball.Les maquettes sont en cours de conception.
 				</p>
-				<Button asChild className="text-2xl text-bold m-6 w-1/2 p-8">
+				<Button asChild className="text-2xl text-bold m-6 p-8 fit-content">
 					<a
 						href="/cv-marina-massot.pdf"
 						target="_blank"
@@ -64,14 +72,14 @@ export const Hero = () => {
 					</a>
 				</Button>
 			</div>
-			<div className="flex-[2] max-md:m-auto ml-auto">
-				<Image
-					width={500}
-					height={500}
-					src="/images/marina-pic.png"
-					alt="Marina-Massot"
-					className="w-full height-auto max-w-sm max-md:w-56 m-auto"
-				/>
+			<div className="flex-[2] max-md:m-auto ml-auto hidden md:block">
+			<Image
+    width={500}
+    height={500}
+    src="/images/marina-pic.png"
+    alt="Marina-Massot"
+    className="w-full height-auto max-w-sm max-md:w-56 m-auto"
+/>
 			</div>
 		</Section>
 	);

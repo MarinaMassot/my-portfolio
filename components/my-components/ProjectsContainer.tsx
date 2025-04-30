@@ -51,31 +51,6 @@ const projectsData = [
 export function ProjectsContainer() {
     const cardRefs = React.useRef<HTMLDivElement[]>([]);
 
-    React.useEffect(() => {
-        if (cardRefs.current) {
-
-            for (const card of cardRefs.current) {
-                if (card) {
-                    card.style.height = 'auto';
-                }
-            }
-
-            const cardHeights = cardRefs.current.map(card => card?.offsetHeight || 0);
-
-            const maxHeight = Math.max(...cardHeights);
-
-            for (const card of cardRefs.current) {
-                if (card) {
-                    card.style.height = `${maxHeight}px`;
-                }
-                const cardContent = card?.querySelector('.card-content') as HTMLElement | null;
-                if (cardContent && cardContent instanceof HTMLElement) {
-                    cardContent.style.height = 'auto'; 
-                }
-            }
-        }
-    }, []);
-
     return (
         <Carousel className="w-full" >
             <CarouselContent className="-ml-1 h-full">
@@ -90,7 +65,7 @@ export function ProjectsContainer() {
                             }}
                         >
                             <Card className="flex flex-col shadow-lg">
-                                <CardContent className=""> 
+                                <CardContent> 
                                 <a href={project.link} target="_blank" rel="noreferrer" className="">
                                         <img
                                             src={project.imageUrl}
@@ -98,10 +73,10 @@ export function ProjectsContainer() {
                                             className="h-full w-full mb-4"
                                         />
                                     </a>
-                                    <h3 className="text-2xl font-bold mb-4 h-15">
+                                    <h3 className="text-2xl font-bold mb-4 h-fit">
                                         {project.title}
                                     </h3>
-                                    <p className="text-lg mb-4 h-50">{project.description}</p>
+                                    <p className="text-lg mb-4 text-justify">{project.description}</p>
                                     <p className="text-mg italic mb-4">{project.stack}</p>
                                 </CardContent>
                             </Card>

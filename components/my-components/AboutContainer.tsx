@@ -24,8 +24,8 @@ export const AboutContainer = () => {
 			</Section>
 			<Spacing size="sm" />
 			<Section>
-				<Card className="flex-1 p-10">
-					<h2 className="text-3xl font-bold text-primary">
+				<Card className=" p-2 md:p-10">
+					<h2 className="text-2xl font-bold text-primary text-center md:text-3xl">
 						{" "}
 						Mes expériences professionnelles significatives
 					</h2>
@@ -34,9 +34,9 @@ export const AboutContainer = () => {
 							<strong>
 								Chef de projet SEO & Traffic manager / Chargée de mission
 								marketing & communication
-							</strong>
-							- Eres Group (05/2022 - 11/2024)
-							<ul className="list-disc pl-4 text-lg mt-6">
+							</strong><br />
+							Eres Group (05/2022 - 11/2024)
+							<ul className="hidden md:block list-disc pl-4 text-lg mt-6">
 								<li>
 									Administration du site vitrine (wordpress) en collaboration
 									avec l’équipe PO et UI/UX
@@ -60,7 +60,7 @@ export const AboutContainer = () => {
 							</ul>
 						</li>
 						<li className="mt-4 text-xl">
-							<strong>Conseillère patrimoniale</strong> - Société
+							<strong>Conseillère patrimoniale</strong> Société
 							Générale/Banque Populaire (11/2017 – 11/2021)
 						</li>
 					</ul>
