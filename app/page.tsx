@@ -1,18 +1,17 @@
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { Spacing } from "./components/Spacing";
-import { ContentContainer } from "./components/ContentContainer";
-import { Menu } from "./components/Menu";
+import { Header } from "../components/my-components/Header";
+import { Hero } from "../components/my-components/Hero";
+import { Spacing } from "../components/my-components/Spacing";
+import { ContentContainer } from "../components/my-components/ContentContainer";
 
 export default function Home() {
   return (
-    <main className="w-full">
-      <Menu />
-      <Header/>
-      <Spacing size="md"/>
-      <Hero/>
-      <Spacing size="md"/>
-      <ContentContainer/>
+    <>
+    <main className="w-full h-full">
+      <Header />
+      <Hero />
+      <Spacing size="md" />
+      <ContentContainer />
     </main>
+    </>
   );
 }

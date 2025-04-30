@@ -1,9 +1,10 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { Section } from "./Section";
 import { cn } from "@/lib/utils";
-import { GithubIcon } from "../icons/GithubIcon";
-import { LinkedinIcon } from "../icons/LinkedinIcon";
+import { GithubIcon } from "../../app/icons/GithubIcon";
+import { LinkedinIcon } from "../../app/icons/LinkedinIcon";
 import { Button } from "@/components/ui/button";
+import { Spacing } from "./Spacing";
 
 
 const TextInBold = ({
@@ -13,7 +14,7 @@ const TextInBold = ({
 	return (
 		<span
 			className={cn(
-				"bg-accent/30 font-mono font-bold border border-accent p-1 rounded-sm text-primary",
+				"bg-accent/90 font-mono font-bold border border-accent p-1 rounded-sm text-primary",
 				className,
 			)}
 			{...props}
@@ -23,20 +24,23 @@ const TextInBold = ({
 
 export const Hero = () => {
 	return (
-		<Section className="flex max-md:flex-col items-start gap-4">
+		<Section className="flex max-md:flex-col items-start">
 			<div className="flex-[3] flex flex-col gap-2 width-full">
-				<h2 className="font-bold text-5xl text-primary">Marina Massot</h2>
+				<h2 className="font-bold text-6xl text-primary font-mono">Marina Massot</h2>
+
 				<ul className="flex items-center gap-2">
 					<a href="https://github.com/marinamassot">
-						<GithubIcon size={60} className="text-foreground"/>
+						<GithubIcon size={60} className="text-foreground" />
 					</a>
 					<a href="https://linkedin.com/in/marinamassot">
-						<LinkedinIcon size={60} className="text-foreground"/>
+						<LinkedinIcon size={60} className="text-foreground" />
 					</a>
 				</ul>
-				<h3 className="font-bold text-3xl">Développeuse web fullstack</h3>
-				<p className="text-lg text-muted-foreground mt-4">
-					En pleine reconversion professionnelle vers le{" "}
+				<Spacing size="sm" />
+				<h3 className="font-bold text-3xl font-mono">Développeuse web fullstack</h3>
+				<Spacing size="sm" />
+				<p className="text-xl text-muted-foreground mt-4 font-poppins">
+					En reconversion professionnelle vers le{" "}
 					<TextInBold>développement web fullstack</TextInBold>, je suis une
 					développeuse web en devenir, animée par une soif d'apprendre
 					constante. Je me forme activement aux technologies telles que{" "}
@@ -47,18 +51,19 @@ export const Hero = () => {
 					également mes compétences dans la gestion de bases de données
 					relationnelles avec <TextInBold>MySQL</TextInBold>. Ce portfolio présente mes projets en cours
 					d'apprentissage et témoigne de ma motivation à acquérir et à mettre en
-					œuvre mes compétences pour créer des solutions web complètes
+					œuvre mes compétences pour créer des solutions web complètes.
+					Actuellement je travaille sur <TextInBold> <a href="https://github.com/SolesApp">SoleApp</a></TextInBold>, Un site comparatif intuitif pour les passionnés de basketball.Les maquettes sont en cours de conception.
 				</p>
-				<Button asChild className="text-2xl text-bold m-6 w-1/2">
-  <a
-    href="cv-marina-massot.pdf"
-    target="_blank"
-    rel="noreferrer"
-    download="cv-marina-massot.pdf"
-  >
-    Télécharge mon CV
-  </a>
-</Button>
+				<Button asChild className="text-2xl text-bold m-6 w-1/2 p-8">
+					<a
+						href="/cv-marina-massot.pdf"
+						target="_blank"
+						rel="noreferrer"
+						download="cv-marina-massot.pdf"
+					>
+						Télécharge mon CV
+					</a>
+				</Button>
 			</div>
 			<div className="flex-[2] max-md:m-auto ml-auto">
 				<img
