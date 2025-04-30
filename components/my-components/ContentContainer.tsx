@@ -14,7 +14,7 @@ export const ContentContainer = () => {
 			<Spacing size="sm" />
 			<Section className="flex max-md:flex-col items-start gap-4">
 				<Card className="flex-[4] w-full p-15 border-0 bg-background/50">
-					<ProjectsContainer className="w-full" />
+					<ProjectsContainer />
 				</Card>
 			</Section>
 			<Spacing size="md" />
@@ -26,7 +26,7 @@ export const ContentContainer = () => {
 				<div className="flex-[2] flex flex-col gap-4">
 					<Card className="p-15 flex-1 border-0 bg-background/50">
 						{" "}
-						<AboutContainer className="w-full" />
+						<AboutContainer />
 					</Card>
 					<Spacing size="md" />
 				</div>

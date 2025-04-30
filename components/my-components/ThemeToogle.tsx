@@ -12,11 +12,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-interface ThemeToogleProps {
-  size?: string;
-}
 
-export function ThemeToogle({ size = "xl" }: ThemeToogleProps) {
+
+export function ThemeToogle() {
   const { setTheme } = useTheme()
 
   return (

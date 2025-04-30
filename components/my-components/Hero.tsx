@@ -5,6 +5,7 @@ import { GithubIcon } from "../../app/icons/GithubIcon";
 import { LinkedinIcon } from "../../app/icons/LinkedinIcon";
 import { Button } from "@/components/ui/button";
 import { Spacing } from "./Spacing";
+import Image from "next/image";
 
 
 const TextInBold = ({
@@ -39,18 +40,16 @@ export const Hero = () => {
 				<Spacing size="sm" />
 				<h3 className="font-bold text-3xl font-mono">Développeuse web fullstack</h3>
 				<Spacing size="sm" />
-				<p className="text-xl text-muted-foreground mt-4 font-poppins">
-					En reconversion professionnelle vers le{" "}
-					<TextInBold>développement web fullstack</TextInBold>, je suis une
-					développeuse web en devenir, animée par une soif d'apprendre
-					constante. Je me forme activement aux technologies telles que{" "}
+				<p className="text-xl text-muted-foreground mt-4 font-poppins text-justify md:w-4/5">
+						En reconversion professionnelle dans le{" "}
+					<TextInBold>développement web fullstack</TextInBold>, je suis passionnée et me forme activement aux technologies telles que{" "}
 					<TextInBold>React.JS</TextInBold> et <TextInBold>Next.js</TextInBold>{" "}
-					pour le front-end, ainsi qu'à
+					pour le front-end, ainsi qu&rsquo;à
 					<TextInBold>Node.js</TextInBold> et{" "}
 					<TextInBold>Express.js</TextInBold> pour le back-end. Je développe
 					également mes compétences dans la gestion de bases de données
 					relationnelles avec <TextInBold>MySQL</TextInBold>. Ce portfolio présente mes projets en cours
-					d'apprentissage et témoigne de ma motivation à acquérir et à mettre en
+					d&rsquo;apprentissage et témoigne de ma motivation à acquérir et à mettre en
 					œuvre mes compétences pour créer des solutions web complètes.
 					Actuellement je travaille sur <TextInBold> <a href="https://github.com/SolesApp">SoleApp</a></TextInBold>, Un site comparatif intuitif pour les passionnés de basketball.Les maquettes sont en cours de conception.
 				</p>
@@ -66,7 +65,9 @@ export const Hero = () => {
 				</Button>
 			</div>
 			<div className="flex-[2] max-md:m-auto ml-auto">
-				<img
+				<Image
+					width={500}
+					height={500}
 					src="/images/marina-pic.png"
 					alt="Marina-Massot"
 					className="w-full height-auto max-w-sm max-md:w-56 m-auto"

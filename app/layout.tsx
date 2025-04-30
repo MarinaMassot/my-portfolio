@@ -38,9 +38,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="fr" className="h-full" suppressHydrationWarning>
-			<head>
-				<link href="./globals.css" rel="stylesheet" />
-			</head>
 			<body
 				className={cn(
 					geistSans.variable,

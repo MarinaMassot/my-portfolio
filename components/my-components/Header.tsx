@@ -7,7 +7,7 @@ export const Header = () => {
 		<header className="w-full top-0">
 			<Section className="flex items-center">
 				<div className="flex-1" />
-				<ThemeToogle size="	xl" />
+				<ThemeToogle />
 			</Section>
 		</header>
 	);

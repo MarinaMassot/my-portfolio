@@ -48,7 +48,7 @@ const projectsData = [
 
 ];
 
-export function ProjectsContainer({ className }: { className?: string }) {
+export function ProjectsContainer() {
     const cardRefs = React.useRef<HTMLDivElement[]>([]);
 
     React.useEffect(() => {
@@ -64,23 +64,23 @@ export function ProjectsContainer({ className }: { className?: string }) {
 
             const maxHeight = Math.max(...cardHeights);
 
-            cardRefs.current.forEach((card, index) => {
+            for (const card of cardRefs.current) {
                 if (card) {
                     card.style.height = `${maxHeight}px`;
                 }
-                const cardContent = card.querySelector('.card-content');
-                if (cardContent) {
+                const cardContent = card?.querySelector('.card-content') as HTMLElement | null;
+                if (cardContent && cardContent instanceof HTMLElement) {
                     cardContent.style.height = 'auto'; 
                 }
-            });
+            }
         }
-    }, [projectsData]);
+    }, []);
 
     return (
         <Carousel className="w-full" >
             <CarouselContent className="-ml-1 h-full">
                 {projectsData.map((project, index) => (
-                    <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={project.title} className="pl-1 md:basis-1/2 lg:basis-1/3">
                         <div
                             className="p-1"
                             ref={(el) => {

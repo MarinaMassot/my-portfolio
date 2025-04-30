@@ -5,7 +5,7 @@ import { BookIcon } from "@/app/icons/BookIcon";
 import { RocketIcon } from "@/app/icons/RocketIcon";
 import { WheelIcon } from "@/app/icons/WheelIcon";
 
-export const AboutContainer = ({ className }: { className?: string }) => {
+export const AboutContainer = () => {
 	return (
 		<div>
 			<Section className="flex flex-wrap gap-4">
@@ -47,8 +47,8 @@ export const AboutContainer = ({ className }: { className?: string }) => {
 								</li>
 								<li>Suivi et analyse des donné́es</li>
 								<li>
-									Actions SEO/SEA pour l'amé́lioration du positionnement sur les
-									mots-clé́s straté́giques (actions sur le SEO technique, on-page
+									Actions SEO/SEA pour l&rsquo;amélioration du positionnement sur les
+									mots-clés stratégiques (actions sur le SEO technique, on-page
 									et off-page, mise en place et suivi des campagnes SEA).
 								</li>
 								<li>Stratégie Social Media / Relation media</li>
